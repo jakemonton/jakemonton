@@ -27,7 +27,7 @@ I care about clear technical decisions, maintainable systems and shipping produc
 
 ## Open to opportunities
 
-Available.
+Available. Let's talk :)
 
 ## Connect
 
