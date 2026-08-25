@@ -4,18 +4,6 @@ I’m a full-stack software engineer and technical lead with 15+ years of experi
 
 I work end to end: from system design, technical architecture and cloud integrations through to polished user experiences and hands-on delivery.
 
-## What I’m building
-
-### [Ledger](https://github.com/jakemonton/budget-app)
-
-A cross-platform personal budgeting app designed to make everyday financial planning clearer and more dependable.
-
-- Flutter application for iOS and Android
-- React + TypeScript web client
-- Supabase backend with PostgreSQL, Auth, Storage and Edge Functions
-- Secure per-user data access through Row Level Security
-- CSV import, recurring bills, budgeting, receipt attachments and local reminders
-
 ## Core capabilities
 
 **SaaS & cloud:** AWS, Supabase, PostgreSQL, Node.js, NestJS, Next.js, cloud integrations  
@@ -39,7 +27,7 @@ I care about clear technical decisions, maintainable systems and shipping produc
 
 ## Open to opportunities
 
-I’m actively seeking Senior Full-Stack Engineer, Technical Lead and SaaS/cloud platform engineering roles. I’m based in Queensland, Australia, and open to remote or Brisbane-based opportunities.
+Available.
 
 ## Connect
 
