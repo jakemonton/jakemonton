@@ -22,14 +22,16 @@ I work end to end: from product discovery, system design and technical architect
 ### Frontend & applications
 
 - React, Next.js, TypeScript
+- HTML, CSS, Sass
 - Flutter, Dart
 - Kotlin, Jetpack Compose
-- Tauri
+- Tauri, Electron
 
 ### Backend & data
 
 - Node.js, NestJS
-- PostgreSQL, Redis, Supabase
+- PHP
+- PostgreSQL, MySQL, Redis, Supabase
 - Prisma, TypeORM
 - REST APIs, GraphQL and cloud integrations
 
@@ -37,7 +39,7 @@ I work end to end: from product discovery, system design and technical architect
 
 - AWS, Docker
 - CI/CD, Git
-- Figma
+- Figma, Claude Code, Codex
 
 ### Architecture
 
