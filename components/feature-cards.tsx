@@ -12,10 +12,10 @@ const icons = [Layers, ShieldCheck, Boxes]
 
 export function FeatureCards() {
   return (
-    <section id="work" className="border-b border-white/10 bg-black py-24">
+    <section id="work" className="border-b border-foreground/10 bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="text-sm text-white/50">What I bring</p>
+          <p className="text-sm text-foreground/50">What I bring</p>
           <h2 className="font-heading mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
             Built for production, not demos.
           </h2>
@@ -36,7 +36,7 @@ export function FeatureCards() {
                     <h3 className="font-heading text-xl font-semibold tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="mt-3 text-white/60">{feature.description}</p>
+                    <p className="mt-3 text-foreground/60">{feature.description}</p>
                   </CanvasBox>
                 </motion.div>
               </Reveal>

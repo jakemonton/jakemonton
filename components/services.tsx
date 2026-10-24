@@ -44,7 +44,7 @@ function PrimaryServiceRow({
           </h3>
         </div>
 
-        <p className="text-white/60">{service.description}</p>
+        <p className="text-foreground/60">{service.description}</p>
       </div>
     </Reveal>
   )
@@ -71,8 +71,8 @@ function ServiceCard({
         className={cn(
           "group flex h-full flex-col justify-between rounded-2xl border p-7 transition-colors duration-300",
           large
-            ? "border-white/15 bg-white/[0.05] hover:border-white/30"
-            : "border-white/10 bg-white/[0.03] hover:border-white/25"
+            ? "border-foreground/15 bg-foreground/[0.05] hover:border-foreground/30"
+            : "border-foreground/10 bg-foreground/[0.03] hover:border-foreground/25"
         )}
       >
         <div>
@@ -90,14 +90,14 @@ function ServiceCard({
           >
             {service.title}
           </h3>
-          <p className={cn("mt-3 text-white/60", large ? "text-base" : "text-sm")}>
+          <p className={cn("mt-3 text-foreground/60", large ? "text-base" : "text-sm")}>
             {service.description}
           </p>
         </div>
 
         <div className="mt-6 flex flex-wrap gap-2">
           {service.tags?.map((tag) => (
-            <Badge key={tag} variant="secondary" className="bg-white/10 text-white/70">
+            <Badge key={tag} variant="secondary" className="bg-foreground/10 text-foreground/70">
               {tag}
             </Badge>
           ))}
@@ -109,16 +109,16 @@ function ServiceCard({
 
 export function Services() {
   return (
-    <section id="services" className="border-b border-white/10 bg-black py-24">
+    <section id="services" className="border-b border-foreground/10 bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal>
-          <p className="text-sm text-white/50">Services</p>
+          <p className="text-sm text-foreground/50">Services</p>
           <h2 className="font-heading mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
             How I can help.
           </h2>
         </Reveal>
 
-        <div className="mt-10 divide-y divide-white/10 border-y border-white/10">
+        <div className="mt-10 divide-y divide-foreground/10 border-y border-foreground/10">
           {primaryServices.map((service, index) => (
             <PrimaryServiceRow
               key={service.title}
@@ -130,7 +130,7 @@ export function Services() {
         </div>
 
         <Reveal delay={0.1} className="mt-16">
-          <p className="text-sm text-white/50">Also available for</p>
+          <p className="text-sm text-foreground/50">Also available for</p>
         </Reveal>
 
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -149,7 +149,7 @@ export function Services() {
           <motion.div
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
-            className="group flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-7 transition-colors duration-300 hover:border-white/25 md:flex-row md:items-center md:justify-between"
+            className="group flex flex-col gap-6 rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-7 transition-colors duration-300 hover:border-foreground/25 md:flex-row md:items-center md:justify-between"
           >
             <div className="flex items-center gap-4">
               <IconBadge icon={Compass} className="size-14" iconClassName="size-6" />
@@ -160,7 +160,7 @@ export function Services() {
               </div>
             </div>
 
-            <p className="text-white/60 md:max-w-sm">{closingService.description}</p>
+            <p className="text-foreground/60 md:max-w-sm">{closingService.description}</p>
 
             <Press className="shrink-0">
               <Button

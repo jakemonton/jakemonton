@@ -44,7 +44,7 @@ function ShadeCell({ index }: { index: number }) {
   return (
     <motion.div
       aria-hidden
-      className="absolute bg-white/[0.06]"
+      className="absolute bg-foreground/[0.06]"
       style={{ width: `${100 / COLS}%`, height: `${100 / ROWS}%` }}
       animate={{
         left: `${(pos.col / COLS) * 100}%`,
@@ -63,7 +63,7 @@ export function GridBackground() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)",
+            "linear-gradient(to right, color-mix(in oklch, var(--foreground) 8%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklch, var(--foreground) 8%, transparent) 1px, transparent 1px)",
           backgroundSize: `${100 / COLS}% ${100 / ROWS}%`,
         }}
       />
@@ -77,10 +77,10 @@ export function GridBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 55% at 50% 35%, transparent 0%, black 75%)",
+            "radial-gradient(ellipse 60% 55% at 50% 35%, transparent 0%, var(--background) 75%)",
         }}
       />
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
     </div>
   )
 }

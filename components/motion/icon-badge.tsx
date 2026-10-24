@@ -18,13 +18,13 @@ export function IconBadge({ icon: Icon, className, iconClassName }: IconBadgePro
   return (
     <div
       className={cn(
-        "flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-white/15 bg-black/40",
+        "flex shrink-0 items-center justify-center overflow-hidden rounded-xl border border-foreground/15 bg-foreground/10",
         className
       )}
     >
       <Icon
         className={cn(
-          "text-white transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-12",
+          "text-foreground transition-transform duration-300 ease-out group-hover:scale-110 group-hover:-rotate-12",
           iconClassName
         )}
       />

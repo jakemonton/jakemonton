@@ -44,7 +44,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/10 bg-black/80 backdrop-blur-md"
+          ? "border-b border-foreground/10 bg-background/80 backdrop-blur-md"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -61,7 +61,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-white/70 transition-colors hover:text-white"
+              className="text-sm text-foreground/70 transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
@@ -78,17 +78,19 @@ export function Navbar() {
           </Press>
         </div>
 
-        <motion.button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          whileTap={{ scale: 0.88 }}
-          transition={{ type: "spring", stiffness: 400, damping: 20 }}
-          className="flex size-9 items-center justify-center text-white md:hidden"
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </motion.button>
+        <div className="flex items-center md:hidden">
+          <motion.button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            whileTap={{ scale: 0.88 }}
+            transition={{ type: "spring", stiffness: 400, damping: 20 }}
+            className="flex size-9 items-center justify-center text-foreground"
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </motion.button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -98,7 +100,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden border-b border-white/10 bg-black md:hidden"
+            className="overflow-hidden border-b border-foreground/10 bg-background md:hidden"
           >
             <motion.div
               variants={linkListVariants}
@@ -112,7 +114,7 @@ export function Navbar() {
                   variants={linkItemVariants}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-2 py-3 text-base text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                  className="rounded-md px-2 py-3 text-base text-foreground/80 transition-colors hover:bg-foreground/5 hover:text-foreground"
                 >
                   {link.label}
                 </motion.a>
@@ -121,7 +123,7 @@ export function Navbar() {
                 variants={linkItemVariants}
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-full bg-white px-2 py-3 text-center text-base font-medium text-black"
+                className="mt-2 rounded-full bg-foreground px-2 py-3 text-center text-base font-medium text-background"
               >
                 Let&apos;s talk
               </motion.a>

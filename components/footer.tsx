@@ -13,7 +13,7 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-black py-12">
+    <footer className="bg-background py-12">
       <Reveal
         y={16}
         className="mx-auto flex max-w-6xl flex-col gap-8 px-6 sm:flex-row sm:items-start sm:justify-between"
@@ -22,7 +22,7 @@ export function Footer() {
           <p className="font-heading text-sm font-semibold tracking-tight uppercase">
             {siteConfig.name}
           </p>
-          <p className="mt-2 max-w-xs text-sm text-white/50">
+          <p className="mt-2 max-w-xs text-sm text-foreground/50">
             {siteConfig.role}
           </p>
         </div>
@@ -33,7 +33,7 @@ export function Footer() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/60 transition-colors hover:text-white"
+                className="text-sm text-foreground/60 transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -54,7 +54,7 @@ export function Footer() {
                         : undefined
                     }
                     aria-label={social.label}
-                    className="flex size-9 items-center justify-center rounded-xl border border-white/15 text-white/70 transition-colors duration-300 hover:border-white/30 hover:text-white"
+                    className="flex size-9 items-center justify-center rounded-xl border border-foreground/15 text-foreground/70 transition-colors duration-300 hover:border-foreground/30 hover:text-foreground"
                   >
                     <Icon className="size-4" />
                   </a>
@@ -66,7 +66,7 @@ export function Footer() {
       </Reveal>
 
       <div className="mx-auto mt-10 max-w-6xl px-6">
-        <div className="border-t border-white/10 pt-6 text-xs text-white/40">
+        <div className="border-t border-foreground/10 pt-6 text-xs text-foreground/40">
           © 2026 {siteConfig.name}. All rights reserved.
         </div>
       </div>

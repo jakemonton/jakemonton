@@ -28,7 +28,7 @@ export function CanvasBox({ children, className }: CanvasBoxProps) {
   const springConfig = { stiffness: 150, damping: 20, mass: 0.4 }
   const smoothX = useSpring(mouseX, springConfig)
   const smoothY = useSpring(mouseY, springConfig)
-  const background = useMotionTemplate`radial-gradient(220px circle at ${smoothX}% ${smoothY}%, rgba(255,255,255,0.14), transparent 70%)`
+  const background = useMotionTemplate`radial-gradient(220px circle at ${smoothX}% ${smoothY}%, color-mix(in oklch, var(--foreground) 14%, transparent), transparent 70%)`
 
   function handleMove(event: MouseEvent<HTMLDivElement>) {
     const rect = event.currentTarget.getBoundingClientRect()
@@ -42,7 +42,7 @@ export function CanvasBox({ children, className }: CanvasBoxProps) {
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors duration-300 hover:border-white/25",
+        "group relative overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.03] transition-colors duration-300 hover:border-foreground/25",
         className
       )}
     >
@@ -51,7 +51,7 @@ export function CanvasBox({ children, className }: CanvasBoxProps) {
         className="pointer-events-none absolute inset-0 opacity-60"
         style={{
           backgroundImage:
-            "radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px)",
+            "radial-gradient(color-mix(in oklch, var(--foreground) 22%, transparent) 1px, transparent 1px)",
           backgroundSize: "18px 18px",
         }}
       />
@@ -67,7 +67,7 @@ export function CanvasBox({ children, className }: CanvasBoxProps) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 50% 0%, transparent 40%, black 100%)",
+            "radial-gradient(ellipse 90% 60% at 50% 0%, transparent 40%, var(--background) 100%)",
         }}
       />
       <div className="relative z-10">{children}</div>

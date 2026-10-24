@@ -26,7 +26,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative flex min-h-[100vh] items-center overflow-hidden border-b border-white/10 bg-black"
+      className="relative flex min-h-[100vh] items-center overflow-hidden border-b border-foreground/10 bg-background"
     >
       <motion.div className="absolute inset-0" style={{ y: gridY }}>
         <GridBackground />
@@ -40,11 +40,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={SPRING}
-          className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-xs text-white/70"
+          className="mb-8 inline-flex items-center gap-2 rounded-full border border-foreground/15 px-3 py-1 text-xs text-foreground/70"
         >
           <span className="relative flex size-1.5">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-white/60" />
-            <span className="relative inline-flex size-1.5 rounded-full bg-white" />
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-foreground/60" />
+            <span className="relative inline-flex size-1.5 rounded-full bg-foreground" />
           </span>
           {hero.eyebrow}
         </motion.div>
@@ -57,7 +57,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ...SPRING, delay: 0.5 }}
-          className="mt-6 max-w-xl text-lg text-white/60"
+          className="mt-6 max-w-xl text-lg text-foreground/60"
         >
           {hero.subheadline}
         </motion.p>
@@ -102,7 +102,7 @@ export function Hero() {
           opacity: { duration: 0.6, delay: 0.6 },
           y: { duration: 1.8, repeat: Infinity, ease: "easeInOut" },
         }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-white/40 transition-colors hover:text-white/80 sm:block"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-foreground/40 transition-colors hover:text-foreground/80 sm:block"
       >
         <ArrowDown className="size-5" />
       </motion.a>

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Jake Monton",
   role: "Full-Stack Engineer",
-  email: "jakermonton@gmail.com",
+  email: "hello@jakemonton.com",
   linkedin: "https://www.linkedin.com/in/jake-monton-0881373b/",
   github: "https://github.com/jakemonton",
 }

@@ -9,10 +9,10 @@ import { faqs } from "@/lib/site-config"
 
 export function FAQ() {
   return (
-    <section id="faq" className="border-b border-white/10 bg-black py-24">
+    <section id="faq" className="border-b border-foreground/10 bg-background py-24">
       <div className="mx-auto max-w-3xl px-6">
         <Reveal>
-          <p className="text-sm text-white/50">FAQ</p>
+          <p className="text-sm text-foreground/50">FAQ</p>
           <h2 className="font-heading mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
             Questions, answered.
           </h2>
@@ -24,12 +24,12 @@ export function FAQ() {
               <AccordionItem
                 key={faq.question}
                 value={faq.question}
-                className="border-white/10"
+                className="border-foreground/10"
               >
                 <AccordionTrigger className="text-base font-medium hover:no-underline">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-white/60">
+                <AccordionContent className="text-foreground/60">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
