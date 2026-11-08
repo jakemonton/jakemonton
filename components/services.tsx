@@ -165,7 +165,7 @@ export function Services() {
             <Press className="shrink-0">
               <Button
                 nativeButton={false}
-                variant="outline"
+                variant="accent"
                 render={
                   <a href="#contact">
                     Let&apos;s talk it through

@@ -71,6 +71,7 @@ export function Hero() {
           <Press>
             <Button
               size="lg"
+              variant="accent"
               nativeButton={false}
               className="h-12 px-6 text-base"
               render={

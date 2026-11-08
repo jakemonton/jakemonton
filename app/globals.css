@@ -39,6 +39,8 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand: var(--brand);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -67,6 +69,8 @@
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 14%);
   --ring: oklch(1 0 0 / 40%);
+  --brand: oklch(0.795 0.165 70);
+  --brand-foreground: oklch(0 0 0);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.7 0 0);
   --chart-3: oklch(0.55 0 0);

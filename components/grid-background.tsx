@@ -67,6 +67,14 @@ export function GridBackground() {
           backgroundSize: `${100 / COLS}% ${100 / ROWS}%`,
         }}
       />
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 45% at 50% 18%, color-mix(in oklch, var(--brand) 16%, transparent) 0%, transparent 70%)",
+        }}
+      />
       <div className="absolute inset-0">
         {Array.from({ length: SHADE_COUNT }, (_, i) => (
           <ShadeCell key={i} index={i} />
