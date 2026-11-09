@@ -53,7 +53,7 @@ export function Contact() {
                   }
                   whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
-                  className="group flex items-center justify-between rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 transition-colors duration-300 hover:border-foreground/25 hover:bg-foreground/[0.05]"
+                  className="group flex items-center justify-between rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 transition-colors duration-300 hover:border-brand/35 hover:bg-foreground/[0.05]"
                 >
                   <span className="flex items-center gap-4">
                     <IconBadge icon={Icon} className="size-10" iconClassName="size-4" />
@@ -64,7 +64,7 @@ export function Contact() {
                       <span className="block font-medium">{link.value}</span>
                     </span>
                   </span>
-                  <ArrowUpRight className="size-4 text-foreground/40 transition-transform duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground" />
+                  <ArrowUpRight className="size-4 text-foreground/40 transition-all duration-300 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand" />
                 </motion.a>
               )
             })}

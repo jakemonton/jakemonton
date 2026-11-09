@@ -71,8 +71,8 @@ function ServiceCard({
         className={cn(
           "group flex h-full flex-col justify-between rounded-2xl border p-7 transition-colors duration-300",
           large
-            ? "border-foreground/15 bg-foreground/[0.05] hover:border-foreground/30"
-            : "border-foreground/10 bg-foreground/[0.03] hover:border-foreground/25"
+            ? "border-foreground/15 bg-foreground/[0.05] hover:border-brand/40"
+            : "border-foreground/10 bg-foreground/[0.03] hover:border-brand/35"
         )}
       >
         <div>
@@ -149,7 +149,7 @@ export function Services() {
           <motion.div
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
-            className="group flex flex-col gap-6 rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-7 transition-colors duration-300 hover:border-foreground/25 md:flex-row md:items-center md:justify-between"
+            className="group flex flex-col gap-6 rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-7 transition-colors duration-300 hover:border-brand/35 md:flex-row md:items-center md:justify-between"
           >
             <div className="flex items-center gap-4">
               <IconBadge icon={Compass} className="size-14" iconClassName="size-6" />
