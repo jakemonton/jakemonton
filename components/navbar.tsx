@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { Press } from "@/components/motion/press"
@@ -49,12 +50,12 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <a
-          href="#home"
+        <Link
+          href="/"
           className="font-heading text-sm font-semibold tracking-tight uppercase"
         >
           {siteConfig.name}
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
@@ -71,9 +72,10 @@ export function Navbar() {
         <div className="hidden md:block">
           <Press>
             <Button
-              size="sm"
+              size="lg"
               nativeButton={false}
-              render={<a href="#contact">Let&apos;s talk</a>}
+              className="h-10 px-5 text-sm"
+              render={<Link href="/#contact">Let&apos;s talk</Link>}
             />
           </Press>
         </div>
@@ -121,7 +123,7 @@ export function Navbar() {
               ))}
               <motion.a
                 variants={linkItemVariants}
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-full bg-foreground px-2 py-3 text-center text-base font-medium text-background"
               >

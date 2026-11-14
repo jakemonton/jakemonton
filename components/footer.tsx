@@ -3,7 +3,7 @@ import { Mail } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { Press } from "@/components/motion/press"
 import { Reveal } from "@/components/motion/reveal"
-import { navLinks, siteConfig } from "@/lib/site-config"
+import { footerLinks, siteConfig } from "@/lib/site-config"
 
 const socials = [
   { label: "Email", href: `mailto:${siteConfig.email}`, icon: Mail },
@@ -22,14 +22,14 @@ export function Footer() {
           <p className="font-heading text-sm font-semibold tracking-tight uppercase">
             {siteConfig.name}
           </p>
-          <p className="mt-2 max-w-xs text-sm text-foreground/50">
-            {siteConfig.role}
+          <p className="mt-2 text-sm text-foreground/50">
+            {siteConfig.role} · <span className="whitespace-nowrap">{siteConfig.location}</span>
           </p>
         </div>
 
         <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
           <nav className="flex flex-col gap-2">
-            {navLinks.map((link) => (
+            {footerLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -66,7 +66,7 @@ export function Footer() {
       </Reveal>
 
       <div className="mx-auto mt-10 max-w-6xl px-6">
-        <div className="border-t border-foreground/10 pt-6 text-xs text-foreground/40">
+        <div className="border-t border-foreground/10 pt-6 text-xs text-foreground/55">
           © 2026 {siteConfig.name}. All rights reserved.
         </div>
       </div>

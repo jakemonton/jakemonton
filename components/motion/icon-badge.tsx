@@ -9,10 +9,8 @@ interface IconBadgeProps {
 }
 
 /**
- * An icon in a bordered box that wiggles when a `.group` ancestor (the
- * card) is hovered. Plain CSS group-hover rather than Framer Motion
- * variant propagation, which doesn't reliably cascade through the
- * non-motion wrapper divs some cards nest it inside.
+ * An icon in a bordered box. When a clickable `.group` ancestor (a linked
+ * card) is hovered, the badge and icon shift to the brand colour.
  */
 export function IconBadge({ icon: Icon, className, iconClassName }: IconBadgeProps) {
   return (
@@ -24,7 +22,7 @@ export function IconBadge({ icon: Icon, className, iconClassName }: IconBadgePro
     >
       <Icon
         className={cn(
-          "text-foreground transition-all duration-300 ease-out group-hover:scale-110 group-hover:-rotate-12 group-hover:text-brand",
+          "text-foreground transition-colors duration-300 group-hover:text-brand",
           iconClassName
         )}
       />
