@@ -72,7 +72,7 @@ export const work = [
   {
     title: "Touch-panel app suite for a global AV manufacturer",
     description:
-      "Modernised a 10+ year-old Android room-booking app and led the settings and setup-wizard experiences across the suite, alongside kiosk and control apps.",
+      "Modernised a 10+ year-old Android room-booking app and delivered the settings and setup-wizard experiences across the suite, alongside kiosk and control apps. I was tech lead and hands-on through public release, then product manager for ongoing maintenance and new features.",
   },
   {
     title: "Hybrid-classroom video app rebuild",
@@ -195,7 +195,7 @@ export const avPage = {
     {
       title: "Touch-panel app suite for a global AV manufacturer",
       description:
-        "Modernised a 10+ year-old Android room-booking app and led the settings and setup-wizard experiences across the suite, alongside kiosk and control apps.",
+        "Modernised a 10+ year-old Android room-booking app and delivered the settings and setup-wizard experiences across the suite, alongside kiosk and control apps. I was tech lead and hands-on through public release, then product manager for ongoing maintenance and new features.",
       stack: "Kotlin · Jetpack Compose",
     },
     {
