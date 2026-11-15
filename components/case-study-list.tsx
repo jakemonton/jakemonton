@@ -6,19 +6,21 @@ import { Reveal } from "@/components/motion/reveal"
 export interface CaseStudy {
   title: string
   description: string
+  /** Your part in it, shown as a quiet label (e.g. "Lead developer"). */
+  role?: string
   stack?: string
   /** Case study page, if one exists. The row becomes a link. */
   href?: string
 }
 
 /**
- * Editorial case-study rows: number, title and description, and the stack,
- * divided by hairlines. Rows with a case study page are links and react on
- * hover; the rest stay static.
+ * Editorial case-study rows: number, title and description, then a meta
+ * column with the role and stack, divided by hairlines. Rows with a case
+ * study page are links and react on hover; the rest stay static.
  */
 export function CaseStudyList({ items }: { items: CaseStudy[] }) {
-  // Only reserve the stack column when at least one row has a stack.
-  const hasStack = items.some((item) => item.stack)
+  // Only reserve the meta column when at least one row has a role or stack.
+  const hasMeta = items.some((item) => item.role || item.stack)
   return (
     <ol className="mt-14 border-b border-foreground/10">
       {items.map((item, index) => {
@@ -39,16 +41,19 @@ export function CaseStudyList({ items }: { items: CaseStudy[] }) {
                 </span>
               )}
             </div>
-            {hasStack &&
-              (item.stack ? (
-                <p className="text-sm text-foreground/55 md:pt-2 md:text-right">{item.stack}</p>
+            {hasMeta &&
+              (item.role || item.stack ? (
+                <div className="text-sm md:pt-2 md:text-right">
+                  {item.role && <p className="text-foreground/70">{item.role}</p>}
+                  {item.stack && <p className="mt-1 text-foreground/45">{item.stack}</p>}
+                </div>
               ) : (
                 <span className="hidden md:block" />
               ))}
           </>
         )
         const grid = `grid grid-cols-1 gap-3 py-8 md:gap-8 md:py-10 ${
-          hasStack ? "md:grid-cols-[4rem_minmax(0,1fr)_14rem]" : "md:grid-cols-[4rem_minmax(0,1fr)]"
+          hasMeta ? "md:grid-cols-[4rem_minmax(0,1fr)_14rem]" : "md:grid-cols-[4rem_minmax(0,1fr)]"
         }`
         return (
           <li key={item.title} className="border-t border-foreground/10">

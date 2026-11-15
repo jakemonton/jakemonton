@@ -72,23 +72,27 @@ export const work = [
   {
     title: "Touch-panel app suite for a global AV manufacturer",
     description:
-      "Modernised a 10+ year-old Android room-booking app and delivered the settings and setup-wizard experiences across the suite, alongside kiosk and control apps. I was tech lead and hands-on through public release, then product manager for ongoing maintenance and new features.",
+      "A suite of meeting-room touch-panel apps covering setup and settings, room booking, kiosk and control, including a modernised 10+ year-old Android room-booking app.",
+    role: "Tech lead, then product manager",
   },
   {
     title: "Hybrid-classroom video app rebuild",
     description:
-      "Launch time dropped from 3–5 seconds to under one, with zero reported crashes after release. I rebuilt the legacy video-distribution app used on university campuses and added automatic NDI discovery.",
+      "A video-distribution app for hybrid university classrooms, rebuilt with automatic NDI discovery. Launch time dropped from 3–5 seconds to under one, with zero reported crashes.",
+    role: "Lead developer",
   },
   {
     title: "AES70 device discovery and provisioning",
     description:
-      "Pro-audio devices on a venue's network can now be adjusted and monitored from the cloud. I built a local gateway and its configurator app that discover the devices and connect them to the cloud platform.",
+      "A local gateway and configurator app that discover AES70 pro-audio devices on a venue's network and connect them to the cloud, so settings like gain can be changed and monitored remotely.",
+    role: "Lead developer",
     href: "/work/aes70-device-discovery",
   },
   {
     title: "Product licensing platform",
     description:
-      "Supports 300+ active licence seats and around $150K in annual revenue. I helped build both the backend and frontend.",
+      "A licensing platform supporting 300+ active licence seats and around $150K in annual revenue.",
+    role: "Full-stack developer, team project",
   },
 ]
 
@@ -195,38 +199,43 @@ export const avPage = {
     {
       title: "Touch-panel app suite for a global AV manufacturer",
       description:
-        "Modernised a 10+ year-old Android room-booking app and delivered the settings and setup-wizard experiences across the suite, alongside kiosk and control apps. I was tech lead and hands-on through public release, then product manager for ongoing maintenance and new features.",
+        "A suite of meeting-room touch-panel apps covering setup and settings, room booking, kiosk and control, including a modernised 10+ year-old Android room-booking app.",
+      role: "Tech lead, then product manager",
       stack: "Kotlin · Jetpack Compose",
     },
     {
       title: "Touch-panel control app rebuild",
       description:
-        "One Flutter codebase now replaces the older control apps on iOS, Android and Windows, making them easier to maintain and extend. It's part of a wider product refresh that also connects the apps to the unified cloud platform below.",
+        "A single Flutter codebase replacing the older control apps on iOS, Android and Windows. It's easier to maintain and extend, and part of a wider product refresh that connects the apps to the unified cloud platform below.",
       stack: "Flutter",
     },
     {
       title: "Unified AV cloud platform",
       description:
-        "Four legacy systems consolidated into one platform covering licensing, authentication, users, files and device configuration, and the cloud side of the same product refresh. I architected it and helped build it.",
+        "One platform consolidating four legacy systems: licensing, authentication, users, files and device configuration. It's the cloud side of the same product refresh.",
+      role: "Architect, team project",
       stack: "Next.js · NestJS · Keygen · AWS",
     },
     {
       title: "Hybrid-classroom video app rebuild",
       description:
-        "Launch time dropped from 3–5 seconds to under one, streams started near-instantly in university testing (previously 5–10 seconds, or not at all), and there were zero reported crashes. I rebuilt the legacy video-distribution app and added automatic NDI discovery.",
+        "A video-distribution app for hybrid university classrooms, rebuilt with automatic NDI discovery. Launch time dropped from 3–5 seconds to under one, streams started near-instantly in university testing (previously 5–10 seconds, or not at all), and there were zero reported crashes.",
+      role: "Lead developer",
       stack: "Electron · React · NDI",
     },
     {
       title: "AES70 device discovery and provisioning",
       description:
-        "Pro-audio devices on a venue's network can now be adjusted and monitored from the cloud. I built a local gateway and its configurator app that discover the devices and connect them to the cloud platform.",
+        "A local gateway and configurator app that discover AES70 pro-audio devices on a venue's network and connect them to the cloud, so settings like gain can be changed and monitored remotely.",
+      role: "Lead developer",
       stack: "Tauri · React · AES70",
       href: "/work/aes70-device-discovery",
     },
     {
       title: "Product licensing platform",
       description:
-        "Supports 300+ active licence seats and around $150K in annual revenue. I helped build both the backend and frontend.",
+        "A licensing platform supporting 300+ active licence seats and around $150K in annual revenue.",
+      role: "Full-stack developer, team project",
       stack: "NestJS · Prisma · React",
     },
   ],
@@ -378,6 +387,7 @@ export const aes70CaseStudy = {
   summary:
     "A local gateway that finds AES70 pro-audio devices on a venue's network and connects them to a cloud platform, so the team can adjust and monitor them from anywhere.",
   facts: [
+    { label: "Role", value: "Lead developer" },
     { label: "Built", value: "Local gateway, configurator app and cloud integration" },
     { label: "Stack", value: "Tauri · React · AES70" },
     { label: "Industry", value: "Professional audio and AV" },
