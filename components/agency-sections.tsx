@@ -53,7 +53,7 @@ export function AgencyTakeOn() {
 }
 
 export function AgencyHowIWork() {
-  const { howIWork, stack } = agencyPage
+  const { howIWork } = agencyPage
   return (
     <section className="border-b border-foreground/10 bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
@@ -77,17 +77,44 @@ export function AgencyHowIWork() {
           ))}
         </dl>
 
-        <Reveal className="mt-20">
-          <h3 className="font-heading text-2xl font-semibold tracking-tight">{stack.heading}</h3>
-          <dl className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {stack.groups.map((group) => (
-              <div key={group.title} className="border-t border-foreground/15 pt-5">
-                <dt className="text-sm text-foreground/50">{group.title}</dt>
-                <dd className="mt-2 text-foreground/80">{group.items}</dd>
-              </div>
-            ))}
-          </dl>
+      </div>
+    </section>
+  )
+}
+
+export function AgencyStack() {
+  const { stack } = agencyPage
+  return (
+    <section className="border-b border-foreground/10 bg-background py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <Reveal>
+          <p className="text-sm text-foreground/50">Stack</p>
+          <h2 className="font-heading mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            {stack.heading}
+          </h2>
         </Reveal>
+
+        <dl className="mt-14 border-b border-foreground/10">
+          {stack.groups.map((group, index) => (
+            <Reveal
+              key={group.title}
+              delay={index * 0.05}
+              className="grid grid-cols-1 gap-4 border-t border-foreground/10 py-7 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:items-center md:gap-10"
+            >
+              <dt className="font-heading text-xl font-semibold tracking-tight">{group.title}</dt>
+              <dd className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-md border border-foreground/12 bg-foreground/[0.03] px-3 py-1.5 text-sm text-foreground/75"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </dd>
+            </Reveal>
+          ))}
+        </dl>
       </div>
     </section>
   )

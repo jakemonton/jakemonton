@@ -451,10 +451,10 @@ export const agencyPage = {
   stack: {
     heading: "What I work in.",
     groups: [
-      { title: "Web and backend", items: "TypeScript, React, Next.js, NestJS, Node.js" },
-      { title: "Mobile and desktop", items: "Kotlin, Jetpack Compose, Flutter, Electron, Tauri" },
-      { title: "Data and cloud", items: "PostgreSQL, MySQL, Prisma, AWS, Docker" },
-      { title: "AI", items: "OpenAI API, MCP, Claude Code, Codex" },
+      { title: "Web and backend", items: ["TypeScript", "React", "Next.js", "NestJS", "Node.js"] },
+      { title: "Mobile and desktop", items: ["Kotlin", "Jetpack Compose", "Flutter", "Electron", "Tauri"] },
+      { title: "Data and cloud", items: ["PostgreSQL", "MySQL", "Prisma", "AWS", "Docker"] },
+      { title: "AI", items: ["OpenAI API", "MCP", "Claude Code", "Codex"] },
     ],
   },
   cta: {

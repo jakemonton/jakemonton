@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { AgencyCta, AgencyHero, AgencyHowIWork, AgencyTakeOn, AgencyWork } from "@/components/agency-sections"
+import { AgencyCta, AgencyHero, AgencyHowIWork, AgencyStack, AgencyTakeOn, AgencyWork } from "@/components/agency-sections"
 import { pageMetadata } from "@/lib/seo"
 import { agencyPage } from "@/lib/site-config"
 
@@ -19,6 +19,7 @@ export default function AgenciesPage() {
       <AgencyHero />
       <AgencyTakeOn />
       <AgencyHowIWork />
+      <AgencyStack />
       <AgencyWork />
       <AgencyCta />
     </>
