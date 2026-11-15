@@ -16,7 +16,7 @@ import { bookingLink, contactForm, siteConfig } from "@/lib/site-config"
  * - Pass `topic` to skip the "what can I help with" question on niche pages.
  */
 
-type Topic = "av" | "fitout" | "custom" | "other"
+type Topic = "av" | "fitout" | "custom" | "agency" | "other"
 type Answers = Record<string, string>
 type Option = { value: string; label: string }
 
@@ -37,6 +37,8 @@ const TOPICS: Option[] = [
   { value: "custom", label: "A custom tool or automation" },
   { value: "other", label: "Something else" },
 ]
+// Topics only set by a page (not offered in the homepage choice list).
+const TOPIC_LABELS: Option[] = [...TOPICS, { value: "agency", label: "Agency or studio work" }]
 
 const firstName = (a: Answers) => (a.name ?? "").trim().split(/\s+/)[0] ?? ""
 
@@ -78,6 +80,18 @@ const STEPS: Step[] = [
     when: (a) => a.topic === "fitout",
   },
   {
+    id: "agencyNeed",
+    kind: "choice",
+    question: () => "What kind of help are you after?",
+    options: [
+      { value: "Overflow on a project", label: "Extra capacity on a project" },
+      { value: "A stuck or late project", label: "A project that's stuck or late" },
+      { value: "Specialist skills", label: "Specialist skills, like mobile, desktop or devices" },
+      { value: "Technical leadership", label: "Technical leadership or architecture" },
+    ],
+    when: (a) => a.topic === "agency",
+  },
+  {
     id: "details",
     kind: "textarea",
     question: (a) =>
@@ -85,7 +99,9 @@ const STEPS: Step[] = [
         ? "What's the most painful part of quoting right now?"
         : a.topic === "av"
           ? "What are you working on, or what's slowing your team down?"
-          : "What's slowing you down right now?",
+          : a.topic === "agency"
+            ? "Tell me a bit about the project and when you'd need help."
+            : "What's slowing you down right now?",
     hint: "A sentence or two is plenty.",
     placeholder: "Type your answer…",
   },
@@ -112,7 +128,7 @@ const usesFallback = !contactForm.accessKey || contactForm.accessKey.startsWith(
 const KEYS = ["1", "2", "3", "4", "5", "6"]
 
 function summarise(a: Answers, activeIds: Set<string>) {
-  const topic = TOPICS.find((t) => t.value === a.topic)?.label ?? a.topic
+  const topic = TOPIC_LABELS.find((t) => t.value === a.topic)?.label ?? a.topic
   return [
     ["Name", a.name],
     ["Email", a.email],
@@ -120,6 +136,7 @@ function summarise(a: Answers, activeIds: Set<string>) {
     ["Looking for", topic],
     ["AV role", activeIds.has("avRole") ? a.avRole : ""],
     ["Quoting today", activeIds.has("quoting") ? a.quoting : ""],
+    ["Help needed", activeIds.has("agencyNeed") ? a.agencyNeed : ""],
     ["Details", a.details],
     ["Timing", a.timing],
   ].filter(([, v]) => v && v.trim()) as [string, string][]

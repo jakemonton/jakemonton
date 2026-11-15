@@ -33,6 +33,7 @@ export const navLinks = [
 
 export const footerLinks = [
   { label: "Work", href: "/#work" },
+  { label: "Custom software", href: "/custom-software" },
   { label: "AV industry", href: "/av" },
 ]
 
@@ -41,13 +42,24 @@ export const hero = {
   headline: "I build the software businesses",
   headlineAccent: "run on.", // set in italic serif
   subheadline:
-    "I'm Jake, an engineer and product lead behind custom tools, products and platforms, with 15+ years shipping software and a decade in AV.",
+    "I'm Jake, a Brisbane engineer and product lead with 15+ years' experience. I help businesses replace clunky processes with software that fits how they work.",
   primaryCta: { label: "Book a call", href: bookingLink.project },
   secondaryCta: { label: "See my work", href: "#work" },
 }
 
 // "What I do": the two pillars on the homepage (section id stays #industries)
+export const industriesHeading = "Practical software, built around your work."
+
 export const industries = [
+  {
+    title: "Automate manual work",
+    description:
+      "Spreadsheets, re-keying and copy-paste workflows turned into software that scales with your team.",
+    // Fit-out page is parked in app/_fit-out-quoting. To publish it, rename the
+    // folder to app/fit-out-quoting and point this card back to "/fit-out-quoting".
+    cta: "See what I can build",
+    href: "/custom-software",
+  },
   {
     title: "Software for AV",
     description:
@@ -55,17 +67,7 @@ export const industries = [
     cta: "See AV work",
     href: "/av",
   },
-  {
-    title: "Automate manual work",
-    description:
-      "Spreadsheets, re-keying and copy-paste workflows turned into software that scales with your team.",
-    // Fit-out page is parked in app/_fit-out-quoting. To publish it, rename the
-    // folder to app/fit-out-quoting and point this card back to "/fit-out-quoting".
-    cta: "Tell me what's slowing you down",
-    href: "/#contact",
-  },
 ]
-
 
 // "Selected work"
 export const work = [
@@ -272,6 +274,193 @@ export const avPage = {
     heading: "Working on an AV product or workflow?",
     description:
       "Whether it's an app that needs rebuilding, a platform that needs scaling, or a manual process your team is sick of, let's talk it through. And if you're an integrator, I'd love to hear what slows your projects down, even if you're not looking to build anything yet.",
+    button: { label: "Book a call", href: bookingLink.project },
+  },
+}
+
+// Public page for local businesses: /custom-software
+export const customSoftwarePage = {
+  meta: {
+    title: "Custom Software and Automation, Brisbane | Jake Monton",
+    description:
+      "Brisbane engineer building custom business software: tools that replace spreadsheets and manual workflows, connected to the systems you already use.",
+  },
+  hero: {
+    eyebrow: "Custom software for businesses · Brisbane, Australia",
+    headline: "Your business has outgrown",
+    headlineAccent: "spreadsheets.", // set in italic serif
+    subheadline:
+      "I build custom tools that replace manual processes, designed around how your team already works and connected to the systems you use.",
+    primaryCta: { label: "Book a call", href: bookingLink.project },
+    secondaryCta: { label: "What I can build", href: "#what-i-build" },
+  },
+  problems: {
+    heading: "Sound familiar?",
+    points: [
+      "The same information gets typed into two or three different places",
+      "Only one person really understands how the spreadsheet works",
+      "Reports take a day to pull together, and they're out of date by Friday",
+      "Jobs, quotes or requests slip through the cracks",
+      "Your team spends more time on admin than on the actual work",
+      "Off-the-shelf software almost fits, but not quite",
+    ],
+  },
+  build: {
+    heading: "What I can build.",
+    items: [
+      {
+        title: "Quoting and estimating",
+        description:
+          "Templates, pricing rules and margins in one place, so quotes are faster, consistent and easy to revise.",
+      },
+      {
+        title: "Job and project tracking",
+        description:
+          "One view of every job, from enquiry to invoice, instead of a spreadsheet, a whiteboard and someone's memory.",
+      },
+      {
+        title: "Scheduling and bookings",
+        description:
+          "Staff, equipment and appointments scheduled without double-ups or back-and-forth emails.",
+      },
+      {
+        title: "Client and supplier portals",
+        description:
+          "Let clients and suppliers submit requests, check progress and download documents themselves.",
+      },
+      {
+        title: "Reporting and dashboards",
+        description:
+          "The numbers you need, up to date and available whenever you want them, without building them by hand.",
+      },
+      {
+        title: "Connecting your systems",
+        description:
+          "Link the software you already use, like your accounting, CRM or job system, so data moves automatically instead of being re-keyed.",
+      },
+    ],
+  },
+  engagement: {
+    heading: "How we'd work together.",
+    description: "Start small with the process that costs you the most time, and build from there.",
+    steps: [
+      {
+        title: "A free intro call",
+        detail: "Free · 20 minutes",
+        description:
+          "Tell me how the work happens today and where it gets stuck. I'll be honest about whether custom software is the right fix.",
+      },
+      {
+        title: "A small first build",
+        detail: "Fixed scope · agreed up front",
+        description:
+          "One clearly defined tool that fixes your biggest bottleneck, with scope and price agreed before anything starts.",
+      },
+      {
+        title: "Grow it from there",
+        detail: "As needed",
+        description:
+          "Add to it as your business changes, with ongoing support so it keeps running smoothly.",
+      },
+    ],
+  },
+  faqs: [
+    {
+      question: "How much does a custom tool cost?",
+      answer:
+        "It depends on what it needs to do. After an intro call I'll give you a fixed price for a clearly defined first build, so you know the cost before anything starts.",
+    },
+    {
+      question: "Do I have to replace the software I already use?",
+      answer:
+        "Usually not. Often the best fix is a tool that works alongside what you already have, like your accounting or job system, rather than replacing it.",
+    },
+    {
+      question: "How long does it take?",
+      answer:
+        "A focused first build usually takes a few weeks. Bigger systems are delivered in stages, so your team gets something useful early instead of waiting months.",
+    },
+    {
+      question: "What if I'm not sure software is the answer?",
+      answer:
+        "That's what the intro call is for. Sometimes an off-the-shelf tool or a better spreadsheet is the right answer, and I'll tell you if it is.",
+    },
+    {
+      question: "Who owns the software?",
+      answer: "You do. Once the project is paid for, the code and your data are yours.",
+    },
+  ],
+  cta: {
+    heading: "What's slowing your team down?",
+    description:
+      "Tell me about the process that eats up the most time. I'll get back to you within one business day with honest thoughts on whether, and how, I can help.",
+    button: { label: "Book a call", href: bookingLink.project },
+  },
+}
+
+// Unlisted page for agency outreach: /agencies. Not linked anywhere on the
+// site, kept out of the sitemap and marked noindex. Share the link directly.
+export const agencyPage = {
+  meta: {
+    title: "Senior Engineering for Agencies | Jake Monton",
+    description:
+      "Brisbane software engineer and product lead available to agencies and studios for overflow builds, project rescues and specialist mobile, desktop and device work.",
+  },
+  hero: {
+    eyebrow: "For agencies and studios · Brisbane, Australia",
+    headline: "Senior engineering capacity,",
+    headlineAccent: "when you need it.", // set in italic serif
+    subheadline:
+      "I'm Jake, an engineer and product lead with 15+ years shipping web, mobile, desktop and device software. I slot into your projects for overflow, rescues and the specialist work your team doesn't usually cover.",
+    primaryCta: { label: "Book a call", href: bookingLink.project },
+    secondaryCta: { label: "See recent work", href: "#agency-work" },
+  },
+  takeOn: {
+    heading: "Where I'm most useful.",
+    points: [
+      "Overflow builds when your team is at capacity",
+      "Projects that are stuck, late or hard to maintain",
+      "Architecture, estimates and code review on bigger builds",
+      "Mobile and desktop apps: Android, Flutter, Electron and Tauri",
+      "Hardware, device and AV integrations most web teams don't touch",
+      "Turning an AI-built prototype into a production-ready product",
+      "Chatbots and OpenAI API integrations",
+      "Pulling data out of documents and files into a searchable knowledge base",
+    ],
+  },
+  howIWork: {
+    heading: "Easy to bring in.",
+    items: [
+      {
+        title: "Your client, your process",
+        description:
+          "White-label or under my own name, whichever suits. I work in your repos, your tickets and your standups, and I never approach your clients directly.",
+      },
+      {
+        title: "Flexible capacity",
+        description:
+          "Part-time, a short sprint or a few weeks full-time, depending on what the project needs. We agree it up front, so you always know what you're getting.",
+      },
+      {
+        title: "Day rate or fixed scope",
+        description:
+          "Billed by the day for ongoing help, or a fixed price for a well-defined piece of work, agreed before anything starts.",
+      },
+    ],
+  },
+  stack: {
+    heading: "What I work in.",
+    groups: [
+      { title: "Web and backend", items: "TypeScript, React, Next.js, NestJS, Node.js" },
+      { title: "Mobile and desktop", items: "Kotlin, Jetpack Compose, Flutter, Electron, Tauri" },
+      { title: "Data and cloud", items: "PostgreSQL, MySQL, Prisma, AWS, Docker" },
+      { title: "AI", items: "OpenAI API, MCP, Claude Code, Codex" },
+    ],
+  },
+  cta: {
+    heading: "Got a project that needs another senior pair of hands?",
+    description:
+      "Tell me what you're working on and when you need help. I'll let you know within one business day whether I can take it on.",
     button: { label: "Book a call", href: bookingLink.project },
   },
 }

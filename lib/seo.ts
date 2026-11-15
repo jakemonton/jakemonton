@@ -12,14 +12,18 @@ export function pageMetadata({
   description,
   path,
   type = "website",
+  noindex = false,
 }: {
   title: string
   description: string
   /** Path from the site root, e.g. "/av". */
   path: string
   type?: "website" | "article"
+  /** Keep the page out of search results (for unlisted pages). */
+  noindex?: boolean
 }): Metadata {
   return {
+    ...(noindex && { robots: { index: false, follow: false } }),
     title,
     description,
     alternates: { canonical: path },

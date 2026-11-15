@@ -5,9 +5,9 @@ import { ArrowRight, Tv2, Workflow } from "lucide-react"
 
 import { IconBadge } from "@/components/motion/icon-badge"
 import { Reveal } from "@/components/motion/reveal"
-import { industries } from "@/lib/site-config"
+import { industries, industriesHeading } from "@/lib/site-config"
 
-const icons = [Tv2, Workflow]
+const icons = [Workflow, Tv2]
 
 export function Industries() {
   return (
@@ -19,7 +19,7 @@ export function Industries() {
         <Reveal>
           <p className="text-sm text-foreground/50">What I do</p>
           <h2 className="font-heading mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
-            Deep in AV. Useful everywhere.
+            {industriesHeading}
           </h2>
         </Reveal>
 

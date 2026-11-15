@@ -11,9 +11,9 @@ import { pageMetadata } from "@/lib/seo"
 import { siteConfig, siteUrl } from "@/lib/site-config"
 
 export const metadata: Metadata = pageMetadata({
-  title: "Jake Monton — Software Engineer & Product Lead",
+  title: "Jake Monton | Custom Software and Automation, Brisbane",
   description:
-    "Brisbane-based software engineer and product lead with 15+ years building production software, from custom business tools to AV products.",
+    "Brisbane software engineer with 15+ years' experience, turning spreadsheets and manual workflows into custom tools, with specialist depth in AV software.",
   path: "/",
 })
 
@@ -26,7 +26,7 @@ const jsonLd = {
   url: siteUrl,
   email: siteConfig.email,
   description:
-    "Custom software, products and platforms for businesses, specialising in AV industry software and custom tools that automate manual work.",
+    "Custom software and automation for businesses: tools that replace spreadsheets and manual workflows, plus specialist AV industry software.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Brisbane",

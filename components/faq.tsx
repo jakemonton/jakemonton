@@ -7,7 +7,7 @@ import {
 import { Reveal } from "@/components/motion/reveal"
 import { faqs } from "@/lib/site-config"
 
-export function FAQ() {
+export function FAQ({ items = faqs }: { items?: { question: string; answer: string }[] }) {
   return (
     <section id="faq" className="border-b border-foreground/10 bg-background py-24">
       <div className="mx-auto max-w-3xl px-6">
@@ -20,7 +20,7 @@ export function FAQ() {
 
         <Reveal delay={0.1} className="mt-12">
           <Accordion>
-            {faqs.map((faq) => (
+            {items.map((faq) => (
               <AccordionItem
                 key={faq.question}
                 value={faq.question}
