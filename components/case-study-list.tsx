@@ -53,7 +53,7 @@ export function CaseStudyList({ items }: { items: CaseStudy[] }) {
           </>
         )
         const grid = `grid grid-cols-1 gap-3 py-8 md:gap-8 md:py-10 ${
-          hasMeta ? "md:grid-cols-[4rem_minmax(0,1fr)_14rem]" : "md:grid-cols-[4rem_minmax(0,1fr)]"
+          hasMeta ? "md:grid-cols-[4rem_minmax(0,1fr)_17rem]" : "md:grid-cols-[4rem_minmax(0,1fr)]"
         }`
         return (
           <li key={item.title} className="border-t border-foreground/10">

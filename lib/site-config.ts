@@ -340,6 +340,27 @@ export const customSoftwarePage = {
       },
     ],
   },
+  why: {
+    heading: "Senior experience, working directly with you.",
+    items: [
+      {
+        title: "15+ years of production software",
+        description:
+          "Web, mobile, desktop and cloud systems that people rely on every day, from university classrooms to global product lines.",
+      },
+      {
+        title: "You deal with me directly",
+        description:
+          "No account managers and no handoffs. The person you explain the problem to is the person who builds the fix.",
+      },
+      {
+        title: "Built to be maintained",
+        description:
+          "Clear, documented and easy for another developer to pick up, so you're never locked in to me.",
+      },
+    ],
+    link: { label: "See selected work", href: "/#work" },
+  },
   engagement: {
     heading: "How we'd work together.",
     description: "Start small with the process that costs you the most time, and build from there.",

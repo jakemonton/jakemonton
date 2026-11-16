@@ -63,7 +63,7 @@ export default function Aes70CaseStudyPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/60">{cs.summary}</p>
 
-          <dl className="mt-14 grid grid-cols-1 gap-6 border-t border-foreground/10 pt-8 sm:grid-cols-3">
+          <dl className="mt-14 grid grid-cols-1 gap-6 border-t border-foreground/10 pt-8 sm:grid-cols-2 lg:grid-cols-4">
             {cs.facts.map((f) => (
               <div key={f.label}>
                 <dt className="text-sm text-foreground/55">{f.label}</dt>

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { ChecklistSection } from "@/components/agency-sections"
@@ -42,6 +43,39 @@ export function CustomBuild() {
             </Reveal>
           ))}
         </dl>
+      </div>
+    </section>
+  )
+}
+
+export function CustomWhy() {
+  const { why } = page
+  return (
+    <section className="border-b border-foreground/10 bg-background py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <Reveal>
+          <p className="text-sm text-foreground/50">Why work with me</p>
+          <h2 className="font-heading mt-3 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl">
+            {why.heading}
+          </h2>
+        </Reveal>
+        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
+          {why.items.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.08} className="border-t border-foreground/15 pt-6">
+              <h3 className="font-heading text-xl font-semibold tracking-tight">{item.title}</h3>
+              <p className="mt-3 text-foreground/60">{item.description}</p>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="mt-12">
+          <Link
+            href={why.link.href}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-brand focus-visible:ring-2 focus-visible:ring-ring/50 focus-visible:outline-none"
+          >
+            {why.link.label}
+            <ArrowRight className="size-4" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   )

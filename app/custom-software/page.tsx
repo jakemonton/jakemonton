@@ -7,6 +7,7 @@ import {
   CustomFaq,
   CustomHero,
   CustomProblems,
+  CustomWhy,
 } from "@/components/custom-software-sections"
 import { pageMetadata } from "@/lib/seo"
 import { customSoftwarePage } from "@/lib/site-config"
@@ -23,6 +24,7 @@ export default function CustomSoftwarePage() {
       <CustomHero />
       <CustomProblems />
       <CustomBuild />
+      <CustomWhy />
       <CustomEngagement />
       <CustomFaq />
       <CustomCta />
